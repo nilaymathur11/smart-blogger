@@ -10,7 +10,7 @@ export async function POST(req, res) {
         const image = data.get('blog_image');
         const imgByteData = await image.arrayBuffer();
         const imgBuffer = Buffer.from(imgByteData)
-        const imgPath = `./public/uploads/${Date.now()}-${image.name}`
+        const imgPath = `./public/tmp/${Date.now()}-${image.name}`
         const imgName = `${Date.now()}-${image.name}`;
         
         await fsPromises.writeFile(imgPath,imgBuffer);
@@ -18,7 +18,7 @@ export async function POST(req, res) {
         const video = data.get('blog_video');
         const vidByteData = await video.arrayBuffer();
         const vidBuffer = Buffer.from(vidByteData)
-        const vidPath = `./public/uploads/${Date.now()}-${video.name}`
+        const vidPath = `./public/tmp/${Date.now()}-${video.name}`
         const vidName = `${Date.now()}-${video.name}`
         
         await fsPromises.writeFile(vidPath,vidBuffer);

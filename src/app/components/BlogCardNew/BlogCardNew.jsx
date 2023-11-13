@@ -9,7 +9,7 @@ export default function BlogCardNew({ blogData }) {
         <div className='grid md:grid-cols-2 grid-cols-1 justify-between items-center md:gap-[50px] gap-[25px] md:my-[100px] my-[50px]'>
             <div className='text-start'>
                 <Link href={`/blogs/${blogData._id}`}>
-                    <Image src={`/uploads/${blogData.blog_image}`} width={100} height={100} className='rounded-lg shadow-xl w-[100%] h-[450px] object-cover object-top' alt='blogImg'/>
+                    <Image src={`/tmp/${blogData.blog_image}`} width={100} height={100} className='rounded-lg shadow-xl w-[100%] h-[450px] object-cover object-top' alt='blogImg'/>
                 </Link>
             </div>
             <div>

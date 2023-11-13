@@ -8,7 +8,7 @@ export default function LatestBlogCard({blogData}) {
     <div>
         <div>
             <Link href={`/blogs/${blogData._id}`}>
-            <Image src={`/uploads/${blogData.blog_image}`} width={100} height={100} className='rounded-lg shadow-xl w-[100%] h-[300px] object-cover object-top' alt='blogImg'/>
+            <Image src={`/tmp/${blogData.blog_image}`} width={100} height={100} className='rounded-lg shadow-xl w-[100%] h-[300px] object-cover object-top' alt='blogImg'/>
             </Link>
         </div>
         <div className='md:text-[25px] text-[20px] font-extrabold hover:underline mt-[16px] text-center'>

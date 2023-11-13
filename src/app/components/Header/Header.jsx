@@ -29,6 +29,7 @@ export default function Header() {
         setJwt(false)
         setUserData(null);
         router.push('/')
+        setMobMenu(false)
     }
     useEffect(()=>{
         if(hasJWT()){
@@ -40,7 +41,7 @@ export default function Header() {
         <header className='md:px-[300px] px-[25px] bg-[#212121]'>
             <div className='py-[20px] grid grid-cols-2 items-center'>
                 <div>
-                    <Link href={'/'}>
+                    <Link href={'/'} onClick={() => setMobMenu(false)}>
                         <Image src={logo} width={'300'} height={'100'} alt='logo'/>
                     </Link>
                 </div>
