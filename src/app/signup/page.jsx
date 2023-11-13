@@ -26,7 +26,7 @@ export default function Signup() {
             revalidate: 0
         }
         try {
-            const result = await fetch('api/create-user', uploadOptions)
+            const result = await fetch(process.env.SERVER_URL + '/api/create-user', uploadOptions)
             let reqData = await result.json()
             localStorage.setItem('token', JSON.stringify(reqData.token));
             localStorage.setItem('userData', JSON.stringify(data));
