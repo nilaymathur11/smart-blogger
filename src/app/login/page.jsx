@@ -10,6 +10,7 @@ import PrimaryButton from '../components/PrimaryButton/PrimaryButton'
 export default function Login() {
     let [success, setSuccess] = useState(null)
     let router = useRouter();
+    const apiUrl = process.env.SERVER_URL;
     let loginHandle = async (e) => {
         e.preventDefault();
         let data = {
@@ -24,7 +25,7 @@ export default function Login() {
             revalidate: 0
         }
         try {
-            const result = await fetch(`/api/get-user`, uploadOptions)
+            const result = await fetch(`${apiUrl}/api/get-user`, uploadOptions)
             let data = await result.json()
             localStorage.setItem('token',JSON.stringify(data.token));
             localStorage.setItem('userData',JSON.stringify(data));

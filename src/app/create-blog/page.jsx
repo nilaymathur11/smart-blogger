@@ -13,6 +13,7 @@ export default function CreateBlog() {
     let [blogVideo, setBlogVideo] = useState('')
     let [success, setSuccess] = useState(null)
     let [checkJwt,setJwt] = useState(null)
+    const apiUrl = process.env.SERVER_URL;
     function hasJWT() {
         let flag = false;
 
@@ -38,12 +39,10 @@ export default function CreateBlog() {
 
         const uploadOptions = {
             method: "POST",
-            body: data,
-            cache: 'no-store',
-            revalidate: 0
+            body: data
         }
         try {
-            const result = await fetch('/api/create-blog', uploadOptions)
+            const result = await fetch(`${apiUrl}/api/create-blog`, uploadOptions)
             if (result.status === 200) {
                 setSuccess(true);
                 router.push('/')
@@ -52,6 +51,7 @@ export default function CreateBlog() {
             }
         } catch (error) {
             console.log(error);
+            setSuccess(false)
         }
     }
     return (
