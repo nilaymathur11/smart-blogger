@@ -9,12 +9,12 @@ export default function BlogCard({ blogData }) {
         <>
             <div className='md:grid hidden grid-cols-2 justify-between items-center gap-[50px] md:my-[100px] my-[50px]'>
                 <div>
-                    <div className='font-bold text-[30px] mb-[25px]'>
+                    <div className='font-bold md:text-[25px] text-[20px] mb-[25px]'>
                         <Link href={`/blogs/${blogData._id}`}>
                             {blogData.blog_title}
                         </Link>
                     </div>
-                    <div className='text-[20px] mb-[25px] font-light'>
+                    <div className='md:text-[20px] text-[17px] mb-[25px] font-light'>
                         {blogData.blog_description}
                     </div>
                     <Link href={`/blogs/${blogData._id}`}>
@@ -35,12 +35,12 @@ export default function BlogCard({ blogData }) {
                     </Link>
                 </div>
                 <div>
-                    <div className='font-bold text-[25px] mb-[25px]'>
+                    <div className='font-bold md:text-[25px] text-[20px] mb-[25px]'>
                         <Link href={`/blogs/${blogData._id}`}>
                             {blogData.blog_title}
                         </Link>
                     </div>
-                    <div className='text-[20px] mb-[25px] font-light'>
+                    <div className='md:text-[20px] text-[17px] mb-[25px] font-light'>
                         {blogData.blog_description}
                     </div>
                     <Link href={`/blogs/${blogData._id}`}>

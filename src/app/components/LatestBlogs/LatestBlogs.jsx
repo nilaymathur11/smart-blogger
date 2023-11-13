@@ -7,7 +7,7 @@ export default function LatestBlogs({ blogData }) {
       <div className='mb-[50px] font-bold text-[40px] capitalize text-center'>
         Latest from the <span className='text-white'>blog</span>
       </div>
-      <div className='grid grid-cols-3 gap-[50px]'>
+      <div className='grid md:grid-cols-3 grid-cols-1 gap-[50px]'>
         {
           blogData.length ?
             blogData.map((v, i) => {
