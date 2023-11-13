@@ -1,6 +1,6 @@
 import DBConnection from "@/utils/DBConnection";
 import CreateBlogs from "@/models/CreateBlogs";
-import fs from "fs";
+import fsPromises from 'fs/promises';
 import {NextResponse} from "next/server";
 
 export async function POST(req, res) {
@@ -13,7 +13,7 @@ export async function POST(req, res) {
         const imgPath = `./public/uploads/${Date.now()}-${image.name}`
         const imgName = `${Date.now()}-${image.name}`;
         
-        fs.writeFileSync(imgPath,imgBuffer);
+        await fsPromises.writeFile(imgPath,imgBuffer);
 
         const video = data.get('blog_video');
         const vidByteData = await video.arrayBuffer();
@@ -21,7 +21,7 @@ export async function POST(req, res) {
         const vidPath = `./public/uploads/${Date.now()}-${video.name}`
         const vidName = `${Date.now()}-${video.name}`
         
-        fs.writeFileSync(vidPath,vidBuffer);
+        await fsPromises.writeFile(vidPath,vidBuffer);
 
         await DBConnection();
         let finalData = {};

@@ -49,7 +49,7 @@ export default function BlogPage({ params }) {
                         </div>
                     </div>
                     :
-                    <div className='md:text-[50px] text-[32px] font-bold md:leading-[60px] leading-[40px] my-[50px]'>Loadind...</div>
+                    <div className='md:text-[25px] text-[18px] font-bold md:leading-[60px] leading-[40px] my-[50px] text-center'>Please Wait...</div>
             }
         </>
     )
