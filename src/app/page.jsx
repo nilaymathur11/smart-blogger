@@ -42,7 +42,7 @@ export default async function Home() {
 
         }
       </div>
-      <LatestBlogs blogData = {blogData.blogs}/>
+      <LatestBlogs blogData = {blogData?blogData.blogs:''}/>
     </main>
   )
 }
