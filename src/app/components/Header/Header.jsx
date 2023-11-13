@@ -74,7 +74,7 @@ export default function Header() {
                             <>
                                 <li className='hover:text-[#45a5d5] transition-all cursor-pointer'>Welcome {userData?userData.data?userData.data.user_fname:userData.user_fname:null}</li>
                                 <li className='hover:text-[#45a5d5] transition-all cursor-pointer'><Link href={'/create-blog'} onClick={() => setMobMenu(false)}>Create Blog</Link></li>
-                                <li className='hover:text-[#45a5d5] transition-all cursor-pointer'><Link href={'/'} onClick={() => setMobMenu(false)}>Log Out</Link></li>
+                                <li className='hover:text-[#45a5d5] transition-all cursor-pointer'><Link href={'/'} onClick={handleLogout}>Log Out</Link></li>
                             </>
                             :
                             <>

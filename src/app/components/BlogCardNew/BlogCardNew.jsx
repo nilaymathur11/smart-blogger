@@ -18,7 +18,7 @@ export default function BlogCardNew({ blogData }) {
                         {blogData.blog_title}
                     </Link>
                 </div>
-                <div className='text-[20px] mb-[25px] font-light'>
+                <div className='md:text-[20px] text-[17px] mb-[25px] font-light'>
                     {blogData.blog_description}
                 </div>
                 <Link href={`/blogs/${blogData._id}`}>
