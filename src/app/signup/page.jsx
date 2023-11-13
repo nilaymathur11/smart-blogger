@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 import BasicInput from '../components/Inputs/BasicInput/BasicInput'
 import PrimaryButton from '../components/PrimaryButton/PrimaryButton'
 
-export default function signup() {
+export default function Signup() {
     let router = useRouter();
     let [success, setSuccess] = useState(null)
     let loginHandle = async (e) => {
