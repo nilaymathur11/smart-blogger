@@ -10,8 +10,9 @@ export default async function Home() {
     cache: 'no-store',
     revalidate: 0
   }
+  const apiUrl = process.env.SERVER_URL;
   try {
-    const result = await fetch(process.env.SERVER_URL + '/api/view-blogs', uploadOptions)
+    const result = await fetch(`${apiUrl}/api/view-blogs`, uploadOptions)
     blogData = await result.json()
   } catch (error) {
     console.log(error);

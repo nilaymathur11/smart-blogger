@@ -43,7 +43,7 @@ export default function CreateBlog() {
             revalidate: 0
         }
         try {
-            const result = await fetch(process.env.SERVER_URL + '/api/create-blog', uploadOptions)
+            const result = await fetch('/api/create-blog', uploadOptions)
             if (result.status === 200) {
                 setSuccess(true);
                 router.push('/')

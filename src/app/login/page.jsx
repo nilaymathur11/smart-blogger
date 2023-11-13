@@ -24,7 +24,7 @@ export default function Login() {
             revalidate: 0
         }
         try {
-            const result = await fetch(process.env.SERVER_URL + '/api/get-user', uploadOptions)
+            const result = await fetch(`/api/get-user`, uploadOptions)
             let data = await result.json()
             localStorage.setItem('token',JSON.stringify(data.token));
             localStorage.setItem('userData',JSON.stringify(data));
@@ -38,6 +38,7 @@ export default function Login() {
             }
         } catch (error) {
             console.log(error);
+            setSuccess(false)
         }
     }
     return (

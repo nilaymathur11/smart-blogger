@@ -32,7 +32,7 @@ export default async function BlogPage({ params }) {
                 </div>
             </div>
             <div className='w-[100%] md:h-[400px] h-[250px] rounded-md my-[50px]'>
-                <video controls autoplay loop muted className='w-[60%] md:h-[400px] h-[250px] rounded-md shadow-lg' src={`/uploads/${blogData.blog_video}`} />
+                <video controls loop muted className='w-[60%] md:h-[400px] h-[250px] rounded-md shadow-lg' src={`/uploads/${blogData.blog_video}`} />
             </div>
             <div className='text-[18px] leading-[40px]'>
                 {blogData.blog_content}
